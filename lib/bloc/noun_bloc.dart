@@ -21,7 +21,7 @@ class NounBloc extends Bloc<NounEvent, NounState> {
         yield NounLoading();
         final nouns = await _nounRepository.fetchWords(event.word);
         if (nouns == null) {
-          yield NounError("Couldn't fetch words. Is the device online?");
+          yield NounError("Couldn't fetch words. Please check spelling");
         } else {
           yield NounLoaded(nouns);
         }

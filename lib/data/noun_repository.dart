@@ -18,8 +18,6 @@ class HttpNounRepository implements NounRepository {
     var response = await http.get("https://words.bighugelabs.com/api/2/$accessToken/$word/json");
 
     try {
-      print(response.statusCode);
-
       if (response.statusCode != 200) {
         throw NetworkException;
       }

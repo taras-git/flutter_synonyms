@@ -14,9 +14,7 @@ class NounLoading extends NounState {
 }
 
 class NounLoaded extends NounState {
-//  final Weather weather;
   final Noun noun;
-
   const NounLoaded(this.noun);
 
   @override
