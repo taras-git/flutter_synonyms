@@ -70,6 +70,7 @@ class _SynonymsPageState extends State<SynonymsPage> {
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   height: 50,
+                  alignment: Alignment.center,
                   color: index % 2 == 0 ? Colors.grey[200] : Colors.grey[300],
                   child: Text(noun.syn.synonyms[index]),
                 );
